@@ -8,3 +8,8 @@
     -e E [E ...]  encrypt files
     -d            decrypt itself
     -s            delete the executable after decryption
+
+#### Example:
+    ./phagocyte.py -r
+    ./phagocyte.py -e lisa.png
+    ./lisa.png -ds (use "lisa" as password for the file in the example)
