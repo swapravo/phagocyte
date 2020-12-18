@@ -77,16 +77,6 @@ def chacha20_encrypt(data, key, iv=None, position=0):
   """Encrypt (or decrypt) with the ChaCha20 cipher."""
   if not isinstance(data, bytes):
     raise TypeError
-  if iv is None:
-    iv = b'\0' * 8
-  if isinstance(key, bytes):
-    if not key:
-      raise ValueError('Key is empty.')
-    if len(key) < 32:
-      # TODO(pts): Do key derivation with PBKDF2 or something similar.
-      key = (key * (32 // len(key) + 1))[:32]
-    if len(key) > 32:
-      raise ValueError('Key too long.')
 
   return bytes(a ^ b for a, b in
       zip(data, yield_chacha20_xor_stream(key, iv, position)))
