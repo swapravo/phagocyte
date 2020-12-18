@@ -8,6 +8,8 @@ to produce the original file. It has no dependencies.
 
 ChaCha20 implementation has been taken from 
 https://github.com/pts/chacha20 and is by pts@fazekas.hu
+Please note that it does NOT use any authenticators
+like Poly1305.
 """
 
 
