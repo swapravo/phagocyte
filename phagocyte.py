@@ -104,7 +104,7 @@ def source():
 
 
 def replicate():
-	with open('worm_' + encode(urandom(4)) + '.py', 'w') as twin:
+	with open('phagocyte_' + encode(urandom(4)) + '.py', 'w') as twin:
 		twin.write(source())
 
 
